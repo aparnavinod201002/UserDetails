@@ -34,7 +34,7 @@ function BlockDetails({ item, refreshData }) {
   };
 
   return (
-    <div>
+    <>
     
       <p style={{ color: isBlocked ? 'red' : 'green', fontWeight: 'bold', margin: '10px 0' }}>
         {isBlocked ? 'User is Blocked' : 'User is Unblocked'}
@@ -64,7 +64,9 @@ function BlockDetails({ item, refreshData }) {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+        <ToastContainer autoClose = {2000}
+                  position = 'top-center' theme='colored'/>
+    </>
   );
 }
 
